@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>MyDo - Domain Name Information</title>
+</head>
+<body>
+	<header>
+		<nav class="navbar navbar-dark bg-dark">
+			<span class="navbar-brand">
+				<div id="logoText"></div>
+			</span>
+		</nav>
+	</header>
+	<main  class="bg-light">
+		<div class="d-flex justify-content-center mb-1 pt-5">
+			<icon-png></icon-png>
+		</div>
+		<div class="d-flex justify-content-center mb-5">
+			<div class="text-center">Search the whois database and look up domain information.</div>
+		</div>
+		<div class="col-sm-12 col-md-8 col-lg-6 offset-md-2 offset-lg-3">
+			<div class="input-group mb-5">
+				<input type="text" id="lookupDomainInput" class="form-control" placeholder="Type domain name" >
+				<div class="input-group-append">
+					<button id="lookupDomainButton" class="btn btn-outline-warning font-weight-bolder"><i class="fas fa-search mr-1"></i>Search</button>
+				</div>
+			</div>
+		</div>
+		<div class="col-sm-12 col-md-10 col-lg-8 offset-md-1 offset-lg-2">
+			<domain-info></domain-info>
+		</div>
+	</main>
+	<footer class="bg-dark">
+		<div class="text-light text-center py-2">
+			Copyright &copy; 2020 - MyDo
+		</div>
+	</footer>
+</body>
+</html>

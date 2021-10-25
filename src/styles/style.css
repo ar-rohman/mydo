@@ -1,0 +1,22 @@
+main {
+    min-height: calc(100vh - (4.625rem + 40px));
+}
+
+footer {
+    height: 3rem;
+}
+
+.btn-outline-warning {
+    color: #ff8b03;
+    border-color: #ff8b03;
+}
+
+.btn-outline-warning:hover, .btn-outline-warning:not(:disabled):not(.disabled):active {
+    color: #fff;
+    background-color: #ff8b03;
+    border-color: #ff8b03;
+}
+
+.bg-mydo {
+    background-color: #ff8b03;
+}
