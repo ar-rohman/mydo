@@ -1,8 +1,8 @@
 class DomainInfo extends HTMLElement {
     constructor() {
-		super();
-		this.shadowDOM = this.attachShadow({mode: "open"});
-	}
+        super();
+        this.shadowDOM = this.attachShadow({ mode: 'open' });
+    }
 
     set domain(domain) {
         this._domain = domain;
@@ -29,7 +29,7 @@ class DomainInfo extends HTMLElement {
         let ip = this._domain.ips;
         ip = ip.toString().replace(/,/g, '<br>');
 
-        let status = this._domain.status;
+        let { status } = this._domain;
         status = status.toString().replace(/ /g, '<br>');
         this.shadowDOM.innerHTML = `
         <style>
@@ -142,8 +142,8 @@ class DomainInfo extends HTMLElement {
                 <p class="mydo-text-normal">${status}</p>
             </div>
         </div>
-        <div class="lastUpdate">Last updated on ${this._domain.audit.updatedDate}</div>`
+        <div class="lastUpdate">Last updated on ${this._domain.audit.updatedDate}</div>`;
     }
 }
 
-customElements.define("domain-info", DomainInfo);
+customElements.define('domain-info', DomainInfo);
