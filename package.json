@@ -10,9 +10,7 @@
   },
   "author": "rohman",
   "license": "ISC",
-  "dependencies": {
-    "bootstrap": "^4.6.0"
-  },
+  "dependencies": {},
   "devDependencies": {
     "@babel/core": "^7.15.8",
     "@babel/preset-env": "^7.15.8",
