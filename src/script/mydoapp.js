@@ -57,6 +57,34 @@ function myDoApp() {
     brandIcon.height = 40;
     brandIcon.alt = 'MyDo';
     logo.appendChild(brandIcon);
+
+    const logoNav = document.querySelector('#logoNav');
+    const brandNavIcon = new Image();
+    brandNavIcon.src = logoText;
+    brandNavIcon.height = 40;
+    brandNavIcon.alt = 'MyDo';
+    logoNav.appendChild(brandNavIcon);
+
+    // toggle sidebar
+    const hamburger = document.getElementById('hamburger');
+    const drawer = document.getElementById('drawer');
+    const close = document.getElementById('close');
+    hamburger.addEventListener('click', () => {
+        drawer.classList.toggle('open');
+    });
+    close.addEventListener('click', () => {
+        drawer.classList.remove('open');
+    });
+    // document.addEventListener('DOMContentLoaded', () => {
+    //     document.addEventListener('click', (event) => {
+    //         // this._closeDrawer(event, navigation);
+    //         const isClickedInsideDrawer = drawer.contains(event.target);
+    //         if (!isClickedInsideDrawer) {
+    //             event.stopPropagation();
+    //             drawer.classList.remove('open');
+    //         }
+    //     });
+    // });
 }
 
 export default myDoApp;

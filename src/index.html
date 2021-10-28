@@ -10,40 +10,69 @@
 </head>
 <body>
 	<header>
-		<nav>
+		<div class="container header-content">
+			<div id="hamburger" class="hamburger">
+				<svg xmlns="http://www.w3.org/2000/svg" class="hamburger-svg" fill="none"
+					viewBox="0 0 24 24" stroke="currentColor">
+					<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+						d="M4 6h16M4 12h16M4 18h7" />
+				</svg>
+			</div>
 			<div class="brand">
 				<div id="logoText"></div>
 			</div>
-		</nav>
+			<nav id="drawer" class="drawer">
+				<div class="nav-header">
+					<div id="logoNav" class=""></div>
+					<div id="close" class="close-btn">
+						<svg xmlns="http://www.w3.org/2000/svg" class="close-btn-svg" fill="none"
+							viewBox="0 0 24 24" stroke="currentColor">
+							<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+						</svg>
+					</div>
+				</div>
+				<div class="menu">
+					<a href="#" class="menu-link">Home</a>
+					<a href="#" class="menu-link">Domain Availability</a>
+					<a href="#" class="menu-link">IP Geolocation</a>
+					<a href="#" class="menu-link">Email Verification</a>
+					<a href="#" class="menu-link">About</a>
+				</div>
+			</nav>
+		</div>
 	</header>
 	<main>
-		<div class="main-logo">
-			<icon-png></icon-png>
-		</div>
-		<div class="main-text">
-			<p>Search the whois database and look up domain information.</p>
-		</div>
-		<div class="">
-			<div class="main-input-group">
-				<input type="text" id="lookupDomainInput" class="input-text" placeholder="Type domain name" >
-				<div class="main-input-group-append">
-					<button id="lookupDomainButton" class="button btn-outline-warning">
-						<svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
-							<path fill-rule="evenodd" d="M8 4a4 4 0 100 8 4 4 0 000-8zM2 8a6 6 0 1110.89 3.476l4.817 4.817a1
-								1 0 01-1.414 1.414l-4.816-4.816A6 6 0 012 8z" clip-rule="evenodd" />
-						</svg>
-						Search
-					</button>
+		<div class="container">
+			<div class="main-logo">
+				<icon-png></icon-png>
+			</div>
+			<div class="main-text">
+				<p>Search the whois database and look up domain information.</p>
+			</div>
+			<div class="">
+				<div class="main-input-group">
+					<input type="text" id="lookupDomainInput" class="input-text" placeholder="Type domain name" >
+					<div class="main-input-group-append">
+						<button id="lookupDomainButton" class="button btn-outline-warning">
+							<svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
+								<path fill-rule="evenodd" d="M8 4a4 4 0 100 8 4 4 0 000-8zM2 8a6 6 0 1110.89 3.476l4.817 4.817a1
+									1 0 01-1.414 1.414l-4.816-4.816A6 6 0 012 8z" clip-rule="evenodd" />
+							</svg>
+							Search
+						</button>
+					</div>
 				</div>
 			</div>
-		</div>
-		<div class="content-result">
-			<domain-info></domain-info>
+			<div class="content-result">
+				<domain-info></domain-info>
+			</div>
 		</div>
 	</main>
 	<footer>
-		<div class="footer-content">
-			Copyright &copy; 2020 - MyDo
+		<div class="container">
+			<div class="footer-content">
+				Copyright &copy; 2020 - MyDo
+			</div>
 		</div>
 	</footer>
 </body>
