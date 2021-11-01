@@ -4,13 +4,14 @@ class ErrorPage extends HTMLElement {
     }
 
     set message(message) {
-        this.message = message;
+        this.errorMessage = message;
     }
 
     render() {
         this.innerHTML = `
-            <div class="">
-                ${this.message}
+            <div class="error-page">
+                <img src="assets/illustration/error-page.svg" alt="Error" class="illustration">
+                <p>${this.errorMessage}</p>
             </div>
         `;
     }

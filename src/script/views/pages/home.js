@@ -7,7 +7,7 @@ const Home = {
     async render() {
         return `
             <div id="home-content" class="home-content">
-                <img src="assets/illustration/whois.svg" alt="Whois illustration" class="home-illustration">
+                <img src="assets/illustration/whois.svg" alt="Whois illustration" class="illustration">
                 <p class="home-description">Search the whois database and look up domain information.</p>
             </div>
             <input-search placeholder="Type domain name"></input-search>

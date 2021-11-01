@@ -89,6 +89,7 @@ nav.open {
 /* Main */
 main {
     min-height: calc(100vh - 50px);
+    color: #1F2937;
 }
 .page-content {
     padding-top: 60px;
@@ -99,8 +100,13 @@ main {
     flex-direction: column;
     align-items: center;
 }
-.home-illustration {
+.illustration {
     width: 256px;
+}
+.error-page {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 /* input search */
 .input-search {
@@ -293,7 +299,7 @@ footer {
     .input-search-group {
         width: 32rem;
     }
-    .home-illustration {
+    .illustration {
         width: 320px;
     }
     .card-body-divide, .card-body-divide-last-child {
@@ -333,7 +339,7 @@ footer {
     .nav-header {
         display: none;
     }
-    .home-illustration {
+    .illustration {
         width: 384px;
     }
     .card-body-divide, .card-body-divide-last-child {
