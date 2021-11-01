@@ -1,21 +1,32 @@
 const DrawerInitiator = {
-    init({ hamburger, navigation }) {
+    init({ hamburger, navigation, drawer }) {
         hamburger.addEventListener('click', (event) => {
-            this._toggleDrawer(event, navigation);
+            this.toggleDrawer(event, navigation);
         });
 
         document.addEventListener('click', (event) => {
-            this._closeDrawer(event, navigation);
+            this.closeDrawer(event, navigation, drawer);
+        });
+
+        // handle swipe left event
+        navigation.addEventListener('touchstart', (event) => {
+            this.touchStart = event.touches[0].clientX;
+        });
+        navigation.addEventListener('touchmove', (event) => {
+            this.touchMove = event.touches[0].clientX;
+            if (this.touchStart - this.touchMove > 50) {
+                navigation.classList.remove('open');
+            }
         });
     },
 
-    _toggleDrawer(event, navigation) {
+    toggleDrawer(event, navigation) {
         event.stopPropagation();
         navigation.classList.toggle('open');
     },
 
-    _closeDrawer(event, navigation) {
-        const isClickedInsideDrawer = navigation.contains(event.target);
+    closeDrawer(event, navigation, drawer) {
+        const isClickedInsideDrawer = drawer.contains(event.target);
         if (!isClickedInsideDrawer) {
             event.stopPropagation();
             navigation.classList.remove('open');

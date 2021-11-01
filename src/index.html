@@ -19,53 +19,26 @@
 				</svg>
 			</div>
 			<div class="brand">
-				<div id="logoText"></div>
+				<img src="assets/images/logoText.png" height="40" width="135" alt="MyDo">
 			</div>
-			<nav id="drawer" class="drawer">
-				<div class="nav-header">
-					<div id="logoNav" class=""></div>
-					<div id="close" class="close-btn">
-						<svg xmlns="http://www.w3.org/2000/svg" class="close-btn-svg" fill="none"
-							viewBox="0 0 24 24" stroke="currentColor">
-							<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
-						</svg>
+			<nav id="navigation">
+				<div id="drawer" class="drawer">
+					<div class="nav-header">
+						<img src="assets/images/logoText.png" height="40" width="135" alt="MyDo">
 					</div>
-				</div>
-				<div class="menu">
-					<a href="#" class="menu-link">Home</a>
-					<a href="#" class="menu-link">Domain Availability</a>
-					<a href="#" class="menu-link">IP Geolocation</a>
-					<a href="#" class="menu-link">Email Verification</a>
-					<a href="#" class="menu-link">About</a>
+					<div id="nav-link" class="menu">
+						<a href="#/home" id="home-link" class="menu-link active">Home</a>
+						<a href="#/domain-availability" id="domain-availability-link" class="menu-link">Domain Availability</a>
+						<a href="#/ip-geolocation" id="ip-geolocation-link" class="menu-link">IP Geolocation</a>
+						<a href="#/email-verification" id="email-verification-link" class="menu-link">Email Verification</a>
+						<a href="#/about" id="about-link" class="menu-link">About</a>
+					</div>
 				</div>
 			</nav>
 		</div>
 	</header>
 	<main>
-		<div class="container">
-			<div class="main-logo">
-				<icon-png></icon-png>
-			</div>
-			<div class="main-text">
-				<p>Search the whois database and look up domain information.</p>
-			</div>
-			<div class="">
-				<div class="main-input-group">
-					<input type="text" id="lookupDomainInput" class="input-text" placeholder="Type domain name" >
-					<div class="main-input-group-append">
-						<button id="lookupDomainButton" class="button btn-outline-warning">
-							<svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
-								<path fill-rule="evenodd" d="M8 4a4 4 0 100 8 4 4 0 000-8zM2 8a6 6 0 1110.89 3.476l4.817 4.817a1
-									1 0 01-1.414 1.414l-4.816-4.816A6 6 0 012 8z" clip-rule="evenodd" />
-							</svg>
-							Search
-						</button>
-					</div>
-				</div>
-			</div>
-			<div class="content-result">
-				<domain-info></domain-info>
-			</div>
+		<div  id="page-content" class="container page-content">
 		</div>
 	</main>
 	<footer>
