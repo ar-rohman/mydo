@@ -6,18 +6,18 @@ import '../components/whois-lookup';
 const Home = {
     async render() {
         return `
-            <div id="home-content" class="home-content">
+            <div id="content" class="content">
                 <img src="assets/illustration/whois.svg" alt="Whois illustration" class="illustration">
-                <p class="home-description">Search the whois database and look up domain information.</p>
+                <p>Search the whois database and look up domain information</p>
             </div>
-            <input-search placeholder="Type domain name"></input-search>
+            <input-search inputId="whois-input" buttonId="whois-button"></input-search>
             <div id="whois-container"></div>
         `;
     },
 
     async afterRender() {
-        const input = document.getElementById('lookupInput');
-        const button = document.getElementById('lookupButton');
+        const input = document.getElementById('whois-input');
+        const button = document.getElementById('whois-button');
         button.addEventListener('click', () => {
             if (input.value) {
                 this.renderContent(input.value);
@@ -31,10 +31,10 @@ const Home = {
     },
     async renderContent(value) {
         const whoisContainer = document.querySelector('#whois-container');
-        const homeContent = document.getElementById('home-content');
+        const content = document.getElementById('content');
         whoisContainer.innerHTML = '<div class="loader">Loading...</div>';
         const whoisResult = await ApiSource.whoisLookup(value);
-        homeContent.classList.add('hide');
+        content.classList.add('hide');
         whoisContainer.innerHTML = '';
         if (whoisResult.ErrorMessage) {
             const whoisContent = document.createElement('error-page');

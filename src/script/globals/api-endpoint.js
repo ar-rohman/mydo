@@ -12,6 +12,17 @@ const ApiEndpoint = {
         });
         return url;
     },
+    domainAvailability(parameter) {
+        const url = new URL(Config.domainAvailabilityUrl);
+        url.search = new URLSearchParams({
+            domainName: parameter,
+            mode: 'DNS_AND_WHOIS ',
+            credits: 'DA', // DA WHOIS
+            apiKey: Config.key,
+            outputFormat: 'JSON',
+        });
+        return url;
+    },
 };
 
 export default ApiEndpoint;

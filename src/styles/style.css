@@ -95,7 +95,7 @@ main {
     padding-top: 60px;
 }
 /*  */
-.home-content {
+.content {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -186,7 +186,6 @@ main {
     padding: 0.75rem 1.25rem;
     background-color: #ff8b03;
     color: #ffffff;
-    border: 1px solid #ff8b03;
     font-size: 1.125rem;
     line-height: 1.75rem;
 }

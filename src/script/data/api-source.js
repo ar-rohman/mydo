@@ -5,6 +5,10 @@ class ApiSource {
     static whoisLookup(parameter) {
         return FetchApi(ApiEndpoint.whois(parameter));
     }
+
+    static domainAvailabilityLookup(parameter) {
+        return FetchApi(ApiEndpoint.domainAvailability(parameter));
+    }
 }
 
 export default ApiSource;
