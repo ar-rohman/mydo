@@ -5,15 +5,13 @@ import '../components/email-lookup';
 
 const EmailVerification = {
     async render() {
+        // const placeholder = ['Type email address', 'mail@example.com'];
         return `
             <div id="content" class="content">
                 <img src="assets/illustration/email-verification.svg" alt="Email verification illustration" class="illustration">
                 <p>Email Address Verification and Validation Services</p>
             </div>
-            <input-search
-                inputId="email-input"
-                buttonId="email-button"
-                placeholder="Type email address"></input-search>
+            <input-search inputId="email-input" buttonId="email-button"></input-search>
             <div id="email-verification-container"></div>
         `;
     },

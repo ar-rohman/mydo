@@ -3,11 +3,43 @@ class InputSearch extends HTMLElement {
         this.render();
     }
 
-    get placeholder() {
-        return this.hasAttribute('placeholder') ? this.getAttribute('placeholder') : 'Type domain name';
-    }
+    // get placeholder() {
+    //     const placeholderList = [
+    //         'Type domain name',
+    //         'Type IPv4 address',
+    //         'Type IPv6 address',
+    //         'Type email address',
+    //         'example.com',
+    //         '10.10.10.10',
+    //         '::ffff:c0a8:101',
+    //         'mail@example.com',
+    //     ];
+    // return this.hasAttribute('placeholder') ? this.getAttribute('placeholder') : placeholderList;
+    // }
 
     get inputId() {
+        if (this.getAttribute('inputId') === 'domain-input') {
+            this.placeholders = [
+                'Type domain name',
+                'e.g example.com',
+            ];
+        } else if (this.getAttribute('inputId') === 'email-input') {
+            this.placeholders = [
+                'Type email address',
+                'e.g mail@example.com',
+            ];
+        } else {
+            this.placeholders = [
+                'Type domain name',
+                'Type IPv4 address',
+                'Type IPv6 address',
+                'Type email address',
+                'e.g example.com',
+                'e.g 10.10.10.10',
+                'e.g ::ffff:c0a8:101',
+                'e.g mail@example.com',
+            ];
+        }
         return this.getAttribute('inputId');
     }
 
@@ -19,7 +51,7 @@ class InputSearch extends HTMLElement {
         this.innerHTML = `
         <div class="input-search">
             <div class="input-search-group">
-                <input type="text" id="${this.inputId}" class="input-text" placeholder="${this.placeholder}" >
+                <input type="text" id="${this.inputId}" class="input-text" placeholder="${this.placeholders[0]}">
                 <div class="input-search-group-append">
                     <button id="${this.buttonId}" class="button">
                         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor">
@@ -31,6 +63,12 @@ class InputSearch extends HTMLElement {
             </div>
         </div>
         `;
+
+        const inputPlaceholderId = document.getElementById(this.inputId);
+        setInterval(() => {
+            const list = this.placeholders[Math.floor(Math.random() * this.placeholders.length)];
+            inputPlaceholderId.placeholder = list;
+        }, 5000);
     }
 }
 
