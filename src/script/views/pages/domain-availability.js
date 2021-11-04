@@ -1,7 +1,7 @@
 import ApiSource from '../../data/api-source';
 import '../components/error-page';
 import '../components/input-search';
-import '../components/domain-check';
+import '../components/domain-lookup';
 
 const DomainAvailability = {
     async render() {
