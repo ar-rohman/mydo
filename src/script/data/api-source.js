@@ -13,6 +13,10 @@ class ApiSource {
     static ipGeolocationLookup(parameter) {
         return FetchApi(ApiEndpoint.ipGeolocation(parameter));
     }
+
+    static emailVerificationLookup(parameter) {
+        return FetchApi(ApiEndpoint.emailVerification(parameter));
+    }
 }
 
 export default ApiSource;

@@ -50,6 +50,18 @@ const ApiEndpoint = {
         }
         return url;
     },
+    emailVerification(parameter) {
+        const url = new URL(Config.emailVerificationUrl);
+        url.search = new URLSearchParams({
+            emailAddress: parameter,
+            validateDns: 1,
+            validateSMTP: 1,
+            _hardRefresh: 1,
+            apiKey: Config.key,
+            outputFormat: 'JSON',
+        });
+        return url;
+    },
 };
 
 export default ApiEndpoint;

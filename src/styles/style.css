@@ -311,6 +311,15 @@ footer {
     max-width: 1280px;
     margin: 0 2rem;
 }
+.green {
+    color: #00B412;
+}
+.red {
+    color: #FF0202;
+}
+.pb-8 {
+    padding-bottom: 2rem;
+}
 @media (min-width: 640px) {
     .input-search-group {
         width: 32rem;
@@ -331,10 +340,7 @@ footer {
     .hamburger {
         display: none;
     }
-    nav.open {
-        background-color: transparent;
-    }
-    nav, .drawer {
+    nav, nav.open, .drawer {
         all: unset;
     }
     .brand {
@@ -366,7 +372,7 @@ footer {
         justify-content: flex-start;
     }
     .card-content-key {
-        width: 16rem;
+        min-width: 20rem;
     }
 }
 @media (min-width: 1024px) {
