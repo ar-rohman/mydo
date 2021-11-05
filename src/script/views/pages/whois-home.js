@@ -41,18 +41,16 @@ const Home = {
             const { msg } = whoisResult.ErrorMessage;
             whoisContent.message = msg;
             whoisContainer.appendChild(whoisContent);
-        } else {
+        } else if (whoisResult.WhoisRecord) {
             const { WhoisRecord } = whoisResult;
-            if (WhoisRecord.dataError) {
-                const whoisContent = document.createElement('error-page');
-                const { dataError } = WhoisRecord;
-                whoisContent.message = dataError;
-                whoisContainer.appendChild(whoisContent);
-            } else {
-                const whoisContent = document.createElement('whois-lookup');
-                whoisContent.whoisRecordData = WhoisRecord;
-                whoisContainer.appendChild(whoisContent);
-            }
+            const whoisContent = document.createElement('whois-lookup');
+            whoisContent.whoisRecordData = WhoisRecord;
+            whoisContainer.appendChild(whoisContent);
+        } else {
+            const whoisContent = document.createElement('error-page');
+            const error = 'Something went wrong, try again';
+            whoisContent.message = error;
+            whoisContainer.appendChild(whoisContent);
         }
     },
 };

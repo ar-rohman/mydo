@@ -21,6 +21,41 @@ class WhoisLookup extends HTMLElement {
     }
 
     render() {
+        if (this.whoisData.registrant) {
+            this.registrant = `
+                <div class="card">
+                    <div class="card-header">Registrant Information</div>
+                    <div class="card-body">
+                        <div class="card-body-divide">
+                            <div class="card-content-key">Organization</div>
+                            <div class="card-content-value">
+                                ${this.whoisData.registrant.organization || this.whoisData.registrant.name || '-'}
+                            </div>
+                        </div>
+                        <div class="card-body-divide">
+                            <div class="card-content-key">State/Province</div>
+                            <div class="card-content-value">
+                                ${this.whoisData.registrant.state || '-'}
+                            </div>
+                        </div>
+                        <div class="card-body-divide">
+                            <div class="card-content-key">Country</div>
+                            <div class="card-content-value">
+                                ${this.whoisData.registrant.country || '-'}
+                            </div>
+                        </div>
+                        <div class="card-body-divide-last-child">
+                            <div class="card-content-key">Country Code</div>
+                            <div class="card-content-value">
+                                ${this.whoisData.registrant.countryCode || '-'}
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            `;
+        } else {
+            this.registrant = '';
+        }
         this.innerHTML = `
             <div class="card">
                 <div class="card-header">Domain Information</div>
@@ -62,35 +97,7 @@ class WhoisLookup extends HTMLElement {
                     </div>
                 </div>
             </div>
-            <div class="card">
-                <div class="card-header">Registrant Information</div>
-                <div class="card-body">
-                    <div class="card-body-divide">
-                        <div class="card-content-key">Organization</div>
-                        <div class="card-content-value">
-                            ${this.whoisData.registrant ? this.whoisData.registrant.organization || this.whoisData.registrant.name || '-' : '-'}
-                        </div>
-                    </div>
-                    <div class="card-body-divide">
-                        <div class="card-content-key">State/Province</div>
-                        <div class="card-content-value">
-                            ${this.whoisData.registrant ? this.whoisData.registrant.state || '-' : '-'}
-                        </div>
-                    </div>
-                    <div class="card-body-divide">
-                        <div class="card-content-key">Country</div>
-                        <div class="card-content-value">
-                            ${this.whoisData.registrant ? this.whoisData.registrant.country || '-' : '-'}
-                        </div>
-                    </div>
-                    <div class="card-body-divide-last-child">
-                        <div class="card-content-key">Country Code</div>
-                        <div class="card-content-value">
-                            ${this.whoisData.registrant ? this.whoisData.registrant.countryCode || '-' : '-'}
-                        </div>
-                    </div>
-                </div>
-            </div>
+            ${this.registrant}
             <div class="card">
                 <div class="card-header">Registrar Information</div>
                 <div class="card-body">
