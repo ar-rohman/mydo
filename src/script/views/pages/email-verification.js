@@ -9,7 +9,7 @@ const EmailVerification = {
         return `
             <div id="content" class="content">
                 <img src="assets/illustration/email-verification.svg" alt="Email verification illustration" class="illustration">
-                <p>Email Address Verification and Validation Services</p>
+                <p>Verify and validate email address</p>
             </div>
             <input-search inputId="email-input" buttonId="email-button"></input-search>
             <input-checkbox checkboxId="email-checkbox"></input-checkbox>

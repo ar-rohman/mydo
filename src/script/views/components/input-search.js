@@ -3,20 +3,6 @@ class InputSearch extends HTMLElement {
         this.render();
     }
 
-    // get placeholder() {
-    //     const placeholderList = [
-    //         'Type domain name',
-    //         'Type IPv4 address',
-    //         'Type IPv6 address',
-    //         'Type email address',
-    //         'example.com',
-    //         '10.10.10.10',
-    //         '::ffff:c0a8:101',
-    //         'mail@example.com',
-    //     ];
-    // return this.hasAttribute('placeholder') ? this.getAttribute('placeholder') : placeholderList;
-    // }
-
     get inputId() {
         if (this.getAttribute('inputId') === 'domain-input') {
             this.placeholders = [

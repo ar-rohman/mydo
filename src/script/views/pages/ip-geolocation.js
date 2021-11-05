@@ -8,7 +8,6 @@ const IpGeolocation = {
         return `
             <div id="content" class="content">
                 <img src="assets/illustration/ip-geolocation.svg" alt="IP geolocation illustration" class="illustration">
-                <p>IP geolocation lookup</p>
                 <p>Search geographical location by IP address, domain name, or email address</p>
             </div>
             <input-search inputId="geolocation-input" buttonId="geolocation-button"></input-search>

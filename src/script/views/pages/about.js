@@ -18,7 +18,7 @@ const About = {
             <p class="about-services">Our services</p>
             <ul class="service-list">
                 <li>
-                    <p>Whois Domain Lookup</p>
+                    <p>Whois Lookup</p>
                     <p>Provides the registration details, also known as the WHOIS record data,</p>
                     <p>of a domain name, an IP address, or an email address.</p>
                 </li>

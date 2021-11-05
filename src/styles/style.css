@@ -145,6 +145,7 @@ main {
     font-size: 0.75rem;
     line-height: 1rem;
     color: #495057;
+    margin-top: -1rem;
 }
 .tips svg {
     color: #ff8b03;

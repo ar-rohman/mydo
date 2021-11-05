@@ -8,7 +8,7 @@ const DomainAvailability = {
         return `
             <div id="content" class="content">
                 <img src="assets/illustration/domain-availability.svg" alt="Domain availability illustration" class="illustration">
-                <p>Check domain availability</p>
+                <p>Domain availability check</p>
             </div>
             <input-search inputId="domain-input" buttonId="domain-button"></input-search>
             <div id="domain-availability-container"></div>

@@ -8,7 +8,7 @@ const Home = {
         return `
             <div id="content" class="content">
                 <img src="assets/illustration/whois.svg" alt="Whois illustration" class="illustration">
-                <p>Search the whois database and look up domain information</p>
+                <p>Search whois record by IP address, domain name, or email address</p>
             </div>
             <input-search inputId="whois-input" buttonId="whois-button"></input-search>
             <div id="whois-container"></div>
