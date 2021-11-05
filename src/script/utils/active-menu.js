@@ -1,5 +1,3 @@
-import config from '../globals/config';
-
 const ActiveMenu = {
     click({ clickedLinks, links, navigation }) {
         clickedLinks.forEach((clickedLink) => {
@@ -8,13 +6,10 @@ const ActiveMenu = {
     },
 
     active({ clickedLink, links, navigation }) {
-        const localStoregeActiveMenu = localStorage.getItem(config.activeMenuLocalStorage);
-        if (localStoregeActiveMenu === clickedLink.id) {
+        if (window.location.href === clickedLink.href) {
             this.toggleActive(links, clickedLink);
-            localStorage.setItem(config.activeMenuLocalStorage, clickedLink.id);
         }
         clickedLink.addEventListener('click', (event) => {
-            localStorage.setItem(config.activeMenuLocalStorage, clickedLink.id);
             this.toggleActive(links, clickedLink);
             event.stopPropagation();
             navigation.classList.remove('open');

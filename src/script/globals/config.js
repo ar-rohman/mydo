@@ -4,7 +4,6 @@ const Config = {
     domainAvailabilityUrl: 'https://domain-availability.whoisxmlapi.com/api/v1',
     ipGeolocationUrl: 'https://ip-geolocation.whoisxmlapi.com/api/v1',
     emailVerificationUrl: 'https://emailverification.whoisxmlapi.com/api/v1',
-    activeMenuLocalStorage: 'mydo-active-menu',
 };
 
 export default Config;
