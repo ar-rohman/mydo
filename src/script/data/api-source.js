@@ -14,8 +14,8 @@ class ApiSource {
         return FetchApi(ApiEndpoint.ipGeolocation(parameter));
     }
 
-    static emailVerificationLookup(parameter) {
-        return FetchApi(ApiEndpoint.emailVerification(parameter));
+    static emailVerificationLookup(keyword, isChecked) {
+        return FetchApi(ApiEndpoint.emailVerification(keyword, isChecked));
     }
 }
 

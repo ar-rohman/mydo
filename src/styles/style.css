@@ -152,7 +152,7 @@ main {
     height: 1.5rem;
     padding-right: 0.5rem;
 }
-/* Input Search */
+/* Input */
 .input-search {
     padding: 1.5rem 0;
     display: flex;
@@ -214,6 +214,35 @@ main {
 .button svg {
     height: 1.25rem;
     width: 1.25rem;
+}
+.input-checkbox-container {
+    display: flex;
+    justify-content: center;
+    margin-top: -1rem;
+}
+.input-checkbox-group {
+    display: flex;
+    align-items: center;
+    column-gap: 0.5rem;
+    width: 100%;
+   font-size: 0.875rem;
+    color: rgba(107,114,128,1);
+}
+.input-checkbox {
+    height: 1rem;
+    width: 1rem;
+    -webkit-appearance: none;
+    appearance: none;
+    border: 1px solid rgb(156, 163, 175);
+    border-radius: 3px;
+}
+.input-checkbox:checked {
+    background-color: #ff8b03;
+    background-image: url("data:image/svg+xml,%3csvg viewBox='0 0 16 16' fill='white' xmlns='http://www.w3.org/2000/svg'%3e%3cpath d='M5.707 7.293a1 1 0 0 0-1.414 1.414l2 2a1 1 0 0 0 1.414 0l4-4a1 1 0 0 0-1.414-1.414L7 8.586 5.707 7.293z'/%3e%3c/svg%3e");
+    background-size: 100% 100%;
+    background-position: 50%;
+    background-repeat: no-repeat;
+    border-color: transparent;
 }
 /* Card */
 .card {
@@ -357,7 +386,7 @@ footer {
     color: #c26700;
 }
 @media (min-width: 640px) {
-    .input-search-group {
+    .input-search-group, .input-checkbox-group {
         width: 32rem;
     }
     .illustration {

@@ -50,13 +50,14 @@ const ApiEndpoint = {
         }
         return url;
     },
-    emailVerification(parameter) {
+    emailVerification(keyword, isChecked) {
+        const freshResult = isChecked ? 1 : 0;
         const url = new URL(Config.emailVerificationUrl);
         url.search = new URLSearchParams({
-            emailAddress: parameter,
+            emailAddress: keyword,
             validateDns: 1,
             validateSMTP: 1,
-            _hardRefresh: 1,
+            _hardRefresh: freshResult,
             apiKey: Config.key,
             outputFormat: 'JSON',
         });
