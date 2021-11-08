@@ -12,17 +12,6 @@ module.exports = {
     module: {
         rules: [
             {
-                test: /\.css$/,
-                use: ['style-loader', 'css-loader'],
-            },
-            // {
-            //     test: /\.(svg|eot|woff|woff2|ttf)$/,
-            //     loader: 'file-loader',
-            //     options: {
-            //         outputPath: 'assets/font',
-            //     },
-            // },
-            {
                 test: /\.(png|jpe?g|gif)$/i,
                 loader: 'file-loader',
                 options: {

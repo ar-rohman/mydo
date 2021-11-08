@@ -1,3 +1,4 @@
+import 'regenerator-runtime';
 import App from './script/views/app';
 import './styles/style.css';
 

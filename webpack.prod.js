@@ -1,3 +1,5 @@
+const MiniCssExtractPlugin = require('mini-css-extract-plugin');
+const CssMinimizerPlugin = require('css-minimizer-webpack-plugin');
 const { merge } = require('webpack-merge');
 const common = require('./webpack.common');
 
@@ -8,6 +10,13 @@ module.exports = merge(common, {
     },
     module: {
         rules: [
+            {
+                test: /\.css$/,
+                use: [
+                    MiniCssExtractPlugin.loader,
+                    'css-loader',
+                ],
+            },
             {
                 test: /\.js$/,
                 exclude: '/node_modules/',
@@ -20,6 +29,17 @@ module.exports = merge(common, {
                     },
                 ],
             },
+        ],
+    },
+    plugins: [
+        new MiniCssExtractPlugin({
+            filename: 'assets/style/[name].[contenthash].css',
+            chunkFilename: '[id].[contenthash].css',
+        }),
+    ],
+    optimization: {
+        minimizer: [
+            new CssMinimizerPlugin(),
         ],
     },
 });
