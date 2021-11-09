@@ -6,7 +6,7 @@ import About from '../views/pages/about';
 
 const routes = {
     '/': WhoisHome, // default page
-    '/home': WhoisHome,
+    '/whois': WhoisHome,
     '/domain-availability': DomainAvailability,
     '/ip-geolocation': IpGeolocation,
     '/email-verification': EmailVerification,

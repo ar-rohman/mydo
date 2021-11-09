@@ -3,7 +3,7 @@ import '../components/error-page';
 import '../components/input-search';
 import '../components/whois-lookup';
 
-const Home = {
+const Whois = {
     async render() {
         return `
             <div id="content" class="content">
@@ -56,4 +56,4 @@ const Home = {
     },
 };
 
-export default Home;
+export default Whois;
