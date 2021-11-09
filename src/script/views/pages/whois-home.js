@@ -16,6 +16,7 @@ const Home = {
     },
 
     async afterRender() {
+        document.title = 'Whois - MyDo';
         const input = document.getElementById('whois-input');
         const button = document.getElementById('whois-button');
         button.addEventListener('click', () => {

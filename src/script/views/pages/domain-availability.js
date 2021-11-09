@@ -16,6 +16,7 @@ const DomainAvailability = {
     },
 
     async afterRender() {
+        document.title = 'Domain Availability - MyDo';
         const input = document.getElementById('domain-input');
         const button = document.getElementById('domain-button');
         button.addEventListener('click', () => {

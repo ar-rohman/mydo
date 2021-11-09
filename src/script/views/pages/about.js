@@ -11,6 +11,7 @@ const About = {
     },
 
     async afterRender() {
+        document.title = 'About - MyDo';
         const aboutContainer = document.querySelector('#about-description');
         aboutContainer.innerHTML = `
             <p class="about-title">About MyDo</p>

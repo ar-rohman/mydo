@@ -29,6 +29,7 @@ const IpGeolocation = {
     },
 
     async afterRender() {
+        document.title = 'IP Geolocation - MyDo';
         const input = document.getElementById('geolocation-input');
         const button = document.getElementById('geolocation-button');
         button.addEventListener('click', () => {

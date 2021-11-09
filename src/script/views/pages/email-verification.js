@@ -18,6 +18,7 @@ const EmailVerification = {
     },
 
     async afterRender() {
+        document.title = 'Email Verification - MyDo';
         const input = document.getElementById('email-input');
         const button = document.getElementById('email-button');
         const checkbox = document.getElementById('email-checkbox');
