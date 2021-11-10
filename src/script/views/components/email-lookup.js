@@ -100,7 +100,7 @@ class EmailLookup extends HTMLElement {
                         <div class="card-content-key">Catch all emails address</div>
                         <div class="card-content-value">${this.catchAllCheck}</div>
                     </div>
-                    <div class="card-body-divide-last-child">
+                    <div class="card-body-divide">
                         <div class="card-content-key">mxRecords</div>
                         <div class="card-content-value">${this.mxRecord}</div>
                     </div>

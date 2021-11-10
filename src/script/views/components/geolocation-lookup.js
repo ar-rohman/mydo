@@ -43,7 +43,7 @@ class GeolocationLookup extends HTMLElement {
                                 ${this.data.as.domain || '-'}
                             </div>
                         </div>
-                        <div class="card-body-divide-last-child">
+                        <div class="card-body-divide">
                             <div class="card-content-key">AS Type</div>
                             <div class="card-content-value">${this.data.as.type || ''}</div>
                         </div>
@@ -99,7 +99,7 @@ class GeolocationLookup extends HTMLElement {
                             ${this.data.location.timezone || '-'}
                         </div>
                     </div>
-                    <div class="card-body-divide-last-child">
+                    <div class="card-body-divide">
                         <div class="card-content-key">Geoname ID</div>
                         <div class="card-content-value">${this.data.location.geonameId || ''}</div>
                     </div>
@@ -126,7 +126,7 @@ class GeolocationLookup extends HTMLElement {
                             ${this.data.connectionType || '-'}
                         </div>
                     </div>
-                    <div class="card-body-divide-last-child">
+                    <div class="card-body-divide">
                         <div class="card-content-key">Domain</div>
                         <div class="card-content-value">
                             ${this.domains || '-'}

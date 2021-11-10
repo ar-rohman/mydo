@@ -252,8 +252,6 @@ main {
     min-width: 0;
     word-wrap: break-word;
     background-color: #ffffff;
-    border: 1px solid #ff8b03;
-    border-radius: 0.25rem;
     margin: 0 auto 1.5rem;
 }
 .card-header {
@@ -262,26 +260,26 @@ main {
     color: #ffffff;
     font-size: 1.125rem;
     line-height: 1.75rem;
-}
-.card-header:first-child {
-    border-radius: calc(0.25rem - 1px) calc(0.25rem - 1px) 0 0;
+    border-radius: 0.25rem 0.25rem 0 0;
 }
 .card-body {
     flex: 1 1 auto;
     min-height: 1px;
 }
-.card-body-divide, .card-body-divide-last-child {
+.card-body-divide {
     display: flex;
     padding: 1.5rem 2rem;
     font-size: 1rem;
     line-height: 1.5rem;
     flex-direction: column;
+    border: 1px solid #ff8b03;
+    border-top: 0;
 }
-.card-body-divide {
-    border-bottom: #ff8b03 solid 1px;
-}
-.card-body-divide:hover, .card-body-divide-last-child:hover {
+.card-body-divide:hover {
     background-color: #fff7ec;
+}
+.card-body-divide:last-child {
+    border-radius: 0 0 0.25rem 0.25rem;
 }
 .card-content-key {
     font-weight: 600;
@@ -291,7 +289,6 @@ main {
     color: #495057;
     font-size: 0.8rem;
     margin: 0 auto 1.5rem;
-    
 }
 /* Footer */
 footer {

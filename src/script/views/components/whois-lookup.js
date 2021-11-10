@@ -44,7 +44,7 @@ class WhoisLookup extends HTMLElement {
                                 ${this.whoisData.registrant.country || '-'}
                             </div>
                         </div>
-                        <div class="card-body-divide-last-child">
+                        <div class="card-body-divide">
                             <div class="card-content-key">Country Code</div>
                             <div class="card-content-value">
                                 ${this.whoisData.registrant.countryCode || '-'}
@@ -68,7 +68,7 @@ class WhoisLookup extends HTMLElement {
                         <div class="card-content-key">IP Address</div>
                         <div class="card-content-value">${this.ip || '-'}</div>
                     </div>
-                    <div class="card-body-divide-last-child">
+                    <div class="card-body-divide">
                         <div class="card-content-key">Name Server</div>
                         <div class="card-content-value">${this.hostName || '-'}</div>
                     </div>
@@ -89,7 +89,7 @@ class WhoisLookup extends HTMLElement {
                             ${this.whoisData.registryData.updatedDateNormalized || '-'}
                         </div>
                     </div>
-                    <div class="card-body-divide-last-child">
+                    <div class="card-body-divide">
                         <div class="card-content-key">Expires Date</div>
                         <div class="card-content-value">
                             ${this.whoisData.registryData.expiresDateNormalized || '-'}
@@ -125,7 +125,7 @@ class WhoisLookup extends HTMLElement {
                             ${this.whoisData.registryData.whoisServer || '-'}
                         </div>
                     </div>
-                    <div class="card-body-divide-last-child">
+                    <div class="card-body-divide">
                         <div class="card-content-key">Status</div>
                         <div class="card-content-value">${this.status || ''}</div>
                     </div>
