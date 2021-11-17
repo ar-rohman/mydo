@@ -1,3 +1,5 @@
+import DateFormat from '../../helper/dateFormat';
+
 class EmailLookup extends HTMLElement {
     connectedCallback() {
         this.render();
@@ -106,7 +108,9 @@ class EmailLookup extends HTMLElement {
                     </div>
                 </div>
             </div>            
-            <div class="last-update">Last updated at ${this.emailData.audit.auditUpdatedDate || '-'}</div>
+            <div class="last-update">
+                Last updated ${DateFormat.timeFromNow(this.emailData.audit.auditUpdatedDate) || '-'}
+            </div>
         `;
     }
 }

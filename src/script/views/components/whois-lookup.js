@@ -1,3 +1,5 @@
+import DateFormat from '../../helper/dateFormat';
+
 class WhoisLookup extends HTMLElement {
     connectedCallback() {
         this.render();
@@ -131,7 +133,9 @@ class WhoisLookup extends HTMLElement {
                     </div>
                 </div>
             </div>
-            <div class="last-update">Last updated at ${this.whoisData.audit.updatedDate || '-'}</div>
+            <div class="last-update">
+                Last updated ${DateFormat.timeFromNow(this.whoisData.audit.updatedDate) || '-'}
+            </div>
         `;
     }
 }
